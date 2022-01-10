@@ -63,3 +63,12 @@ Each step requires a new terminal.
     - Click enter as the tips in terminal, Franka will start moving.
 
 ---
+
+
+# Other useful commands
+
+## Move to start position of Franka
+
+- Start a new terminal, run the command blow:
+
+```roslaunch franka_example_controllers move_to_start.launch robot_ip:=192.168.1.100```
