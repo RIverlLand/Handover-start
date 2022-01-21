@@ -10,11 +10,12 @@ Steps to open handover
 Open a new terminal,
 
 ```roslaunch realsense2_camera rs_camera.launch align_depth:=true```
+
 ---
 
 ## Step 2: Open dockers
 
-Each step requires a new terminal.
+__Each step requires a new terminal.__
 
 ### First: FrankaHW
 
@@ -69,6 +70,13 @@ Each step requires a new terminal.
 
 ## Move to start position of Franka
 
-- Start a new terminal, run the command blow:
+- Start a new terminal, run the command below:
 
 ```roslaunch franka_example_controllers move_to_start.launch robot_ip:=192.168.1.100```
+
+
+## Recover from error when using controller
+
+- Start a new terminal, run the command below:
+
+```rostopic pub -1 /franka_control/error_recovery/goal franka_msgs/ErrorRecoveryActionGoal "{}"```
